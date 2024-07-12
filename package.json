@@ -1,23 +1,22 @@
 {
-  "name": "manage-your-task",
+  "name": "manage-your-tasks",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/index.js",
+  "description": "An Electron application to manage your tasks",
   "scripts": {
-    "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint -c .eslintrc --ext .ts ./src",
+    "start": "npm run build && electron ./dist/main.js"
   },
-  "author": "Mohamed Djeghbala",
-  "license": "ISC",
+  "repository": "https://github.com/mdjeghbala/manage-your-tasks",
+  "author": "GitHub",
+  "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^31.1.0",
-    "html-webpack-plugin": "^5.6.0",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.92.1",
-    "webpack-cli": "^5.1.4"
-  },
-  "dependencies": {
-    "path-browserify": "^1.0.1"
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "electron": "^28.1.0",
+    "eslint": "^7.32.0",
+    "typescript": "^4.8.3"
   }
 }
